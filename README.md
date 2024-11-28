@@ -11,6 +11,7 @@ Welcome to SingingAI, a project dedicated to helping deaf individuals learn to s
 6. [Practicing with Music and Videos](#practicing-with-music-and-videos)
 7. [Recording and Reviewing](#recording-and-reviewing)
 8. [Joining a Community](#joining-a-community)
+9. [Pitch Visualization Feature](#pitch-visualization-feature)
 
 ## Introduction
 Learning to sing as a deaf person is absolutely possible and can be an incredibly rewarding journey. While you may not be able to hear the music or your own voice in the traditional sense, there are various techniques and tools that can help you develop your singing skills. Here are some tips to guide you on your singing journey:
@@ -42,6 +43,19 @@ Learning to sing as a deaf person is absolutely possible and can be an incredibl
 ### 7. **Joining a Community**
 - **Support Groups**: Join online or local groups for deaf musicians and singers. Sharing experiences and tips can be highly motivating.
 - **Community Involvement**: Participate in community music events, whether they are physical or virtual, to gain confidence and experience.
+
+### 8. **Pitch Visualization Feature**
+- **Real-Time Visual Feedback**: Display a graphical representation of the user's pitch in real-time. Use a moving line or a color-coded system to show whether they are hitting the target pitch.
+- **Target Pitch Indicator**: Show the target pitch on the same display, allowing users to see how their pitch compares.
+- **Visual Notes**: Display the musical notes on a staff or a piano roll as they are sung.
+- **Color Coding**: Use different colors to represent correct, flat, and sharp notes.
+- **Spectrogram Display**: Provide a spectrogram that shows the frequency spectrum of the user's voice. This can help users visualize the different frequencies they are producing.
+- **Real-Time Analysis**: Ensure the spectrogram updates in real-time for immediate feedback.
+- **Haptic Feedback**: Integrate haptic feedback to complement visual feedback, helping users feel the rhythm and pitch.
+- **Performance Metrics**: Show detailed metrics on performance, including pitch accuracy, note duration, and overall improvement.
+- **Progress Graphs**: Visualize progress over time with graphs and charts.
+- **Sensitivity Adjustment**: Allow users to adjust the sensitivity of pitch detection based on their vocal range and skill level.
+- **Display Options**: Provide options to customize the visual feedback display (e.g., color schemes, types of visual representation).
 
 Embarking on this journey can be incredibly fulfilling. Embrace the process and celebrate each milestone! 🎶🎤
 
