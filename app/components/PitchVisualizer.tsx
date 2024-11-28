@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import * as Haptics from 'expo-haptics';
 import { Audio } from 'expo-av';
-import { PitchDetector } from 'pitchy';
+import { usePitchDetector } from 'react-native-pitchy';
 
 const PitchVisualizer = () => {
   const [pitch, setPitch] = useState(null);
@@ -18,6 +18,14 @@ const PitchVisualizer = () => {
     hapticFeedbackResponse: 0,
   });
 
+  const { start, stop, isRecording } = usePitchDetector({
+    onPitchDetected: (detectedPitch) => {
+      setPitch(detectedPitch);
+      updatePerformanceMetrics(detectedPitch);
+      handleHapticFeedback(detectedPitch);
+    },
+  });
+
   useEffect(() => {
     const startPitchDetection = async () => {
       await Audio.requestPermissionsAsync();
@@ -31,26 +39,13 @@ const PitchVisualizer = () => {
         staysActiveInBackground: true,
       });
 
-      const recording = new Audio.Recording();
-      await recording.prepareToRecordAsync(Audio.RECORDING_OPTIONS_PRESET_HIGH_QUALITY);
-      await recording.startAsync();
-
-      const { sound, status } = await recording.createNewLoadedSoundAsync();
-      const pitchDetector = new PitchDetector();
-
-      sound.setOnPlaybackStatusUpdate((status) => {
-        if (status.isLoaded && status.isPlaying) {
-          const [detectedPitch] = pitchDetector.getPitch(status.metering);
-          setPitch(detectedPitch);
-          updatePerformanceMetrics(detectedPitch);
-          handleHapticFeedback(detectedPitch);
-        }
-      });
+      start();
     };
 
     startPitchDetection();
 
     return () => {
+      stop();
       Audio.setAudioModeAsync({
         allowsRecordingIOS: false,
         interruptionModeIOS: Audio.INTERRUPTION_MODE_IOS_DO_NOT_MIX,
