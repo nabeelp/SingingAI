@@ -48,3 +48,11 @@ Embarking on this journey can be incredibly fulfilling. Embrace the process and 
 ## This Project
 This project aims to develop a mobile application that leverages AI technology to provide personalized singing lessons for deaf individuals. By analyzing the user's voice and providing visual feedback, the app will help users improve their pitch, rhythm, and overall singing skills. Stay tuned for updates on this exciting initiative!
 
+### Starting Point
+Starting with the visual aids and vibration sensation techniques, the app will guide users through basic vocal exercises to develop their pitch awareness. The app will also include interactive lessons on breathing techniques and vocal warm-ups.
+
+### Ideas
+- Visual Pitch Representation: Display pitch and notes visually in real-time so users can match their voice to target pitches.
+- Vibration Feedback: Use low-frequency vibrations via audio files or visual indicators to represent rhythm and tone.
+- Lip-Reading Guidance: Include videos or animations of proper mouth movements for each note.
+- Rhythm Training: Use visual metronomes or rhythm games to help users learn timing.
